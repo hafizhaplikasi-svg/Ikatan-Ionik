@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ikatan Ionik – Belajar Kimia Kelas 10</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@500;700;800&display=swap">
+<style>
+:root{--bg:#F3EEFF;--ink:#2B1B5A;--card:#fff;--s1:#FFE98A;--s2:#B8F0E6;--s3:#FFC9D4;--line:#2B1B5A;--sh:#2B1B5A;--pur:#6C3CF0;--sun:#FFD23F;--cor:#FF5D73;--mint:#1FB5A3;--sky:#2BB8F0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1B1240;--ink:#FFF6E5;--card:#2B1D63;--s1:#3A2A7A;--s2:#0F3F55;--s3:#5A1F4E;--line:#FFF6E5;--sh:#0B0620}}
+:root[data-theme="dark"]{--bg:#1B1240;--ink:#FFF6E5;--card:#2B1D63;--s1:#3A2A7A;--s2:#0F3F55;--s3:#5A1F4E;--line:#FFF6E5;--sh:#0B0620}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;font-weight:600;line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Fredoka','Trebuchet MS',system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+.hero{background:var(--pur) radial-gradient(circle at 1px 1px,rgba(255,255,255,.22) 2px,transparent 3px) 0 0/26px 26px;color:#fff;padding:56px 0 64px;text-align:center;overflow:hidden}
+.hero h1{font-size:clamp(48px,11vw,104px);font-weight:700;margin:0;text-shadow:4px 4px 0 var(--cor),8px 8px 0 #2B1B5A}
+.hero p{max-width:560px;margin:22px auto 26px;font-size:20px}
+.pair{display:flex;justify-content:center;align-items:center;margin:26px 0 8px;height:110px}
+.ion{width:92px;height:92px;border-radius:50%;border:4px solid #2B1B5A;display:grid;place-items:center;font:700 30px 'Fredoka',sans-serif;color:#2B1B5A;box-shadow:4px 4px 0 #2B1B5A}
+.ion.a{background:#FF8FA3;animation:ia 1.4s .5s cubic-bezier(.5,0,.3,1.4) both}
+.ion.b{background:#5FE0CF;animation:ib 1.4s .5s cubic-bezier(.5,0,.3,1.4) both}
+@keyframes ia{from{transform:translateX(-120px)}to{transform:none}}
+@keyframes ib{from{transform:translateX(120px)}to{transform:none}}
+.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn,.chip{font:700 16px 'Nunito',sans-serif;border:3px solid var(--line);border-radius:999px;padding:8px 18px;cursor:pointer;background:var(--card);color:var(--ink);box-shadow:3px 3px 0 var(--sh);transition:transform .12s,box-shadow .12s}
+.btn:active,.chip:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--sh)}
+.btn.y,.chip.on{background:var(--sun);color:#2B1B5A}
+.btn.big{padding:10px 22px;font-size:17px}
+.btn:disabled{opacity:.45;cursor:default}
+:focus-visible{outline:4px solid var(--sky);outline-offset:3px}
+section{padding:56px 0}
+#s1{background:var(--s1)}#s2{background:var(--s2)}#s3{background:var(--s3)}#s4{background:var(--bg)}
+h2{font-size:clamp(28px,5vw,42px)}
+.tag{display:inline-block;background:var(--pur);color:#fff;border:3px solid var(--line);border-radius:14px 14px 14px 2px;padding:2px 14px;font:700 18px 'Fredoka',sans-serif;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media(max-width:780px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);color:var(--ink);border:3px solid var(--line);border-radius:22px;box-shadow:6px 6px 0 var(--sh);padding:20px}
+.card h3{font-size:22px}
+.card ul,.card ol{padding-left:22px;margin:.4em 0}
+.card li{margin:.35em 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.chip{padding:6px 14px;box-shadow:2px 2px 0 var(--sh)}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:4px;text-align:center}
+.duo svg{width:100%;height:auto;color:var(--ink)}
+.duo .ar{font:700 30px 'Fredoka',sans-serif;color:var(--cor)}
+.cap{font-weight:800;font-size:15px}
+.say{background:var(--sun);color:#2B1B5A;border:3px solid var(--line);border-radius:16px;padding:12px 16px;margin-top:12px;font-weight:700}
+.gas{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.gas span{background:var(--sky);color:#2B1B5A;border:3px solid var(--line);border-radius:14px;padding:2px 12px;font-weight:800}
+.gol{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px;text-align:center}
+.gol div{border:3px solid var(--line);border-radius:14px;padding:4px;background:var(--s2);color:#2B1B5A;font-weight:800;line-height:1.3}
+.gol b{display:block;font:700 22px 'Fredoka',sans-serif}
+.stage{width:100%;height:auto;color:var(--ink);background:var(--bg);border:3px solid var(--line);border-radius:18px}
+.g{transition:transform .9s cubic-bezier(.6,0,.3,1)}
+#mv{transition:transform .9s cubic-bezier(.6,0,.3,1)}
+.ctl{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap}
+.dots{display:flex;gap:8px}.dots i{width:14px;height:14px;border-radius:50%;border:3px solid var(--line);background:var(--card)}.dots i.on{background:var(--cor)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+select{font:700 16px 'Nunito',sans-serif;border:3px solid var(--line);border-radius:12px;padding:6px 10px;background:var(--card);color:var(--ink)}
+.formula{font:700 48px 'Fredoka',sans-serif;margin:6px 0 0}
+.bub{display:inline-grid;place-items:center;min-width:58px;height:58px;border-radius:50%;border:3px solid var(--line);font:700 17px 'Fredoka',sans-serif;color:#2B1B5A;margin:3px}
+.bub.m{background:#FF8FA3}.bub.x{background:#5FE0CF}
+.q{margin:0 0 18px}
+.q p{font-weight:800;margin:0 0 8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt.ok{background:#5FE0CF;color:#2B1B5A}.opt.no{background:#FF8FA3;color:#2B1B5A}
+.fb{margin-top:6px;font-size:15px}
+footer{background:#2B1B5A;color:#fff;text-align:center;padding:26px 18px}
+@media(prefers-reduced-motion:reduce){.ion,.g,#mv{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="pair"><div class="ion a">Na⁺</div><div class="ion b">Cl⁻</div></div>
+  <h1>Ikatan Ionik</h1>
+  <p>Bagaimana atom saling memberi dan menerima elektron sampai semuanya stabil? Ayo cari tahu, sambil mencoba sendiri!</p>
+  <div class="nav">
+    <button class="btn y big" data-go="s1">Atom dan kestabilan</button>
+    <button class="btn big" data-go="s2">Struktur Lewis</button>
+    <button class="btn big" data-go="s3">Pembentukan ikatan</button>
+    <button class="btn big" data-go="s4">Uji pemahaman</button>
+  </div>
+</div></header>
+
+<section id="s1"><div class="wrap">
+  <span class="tag">Materi 1</span>
+  <h2>Cara atom mencapai kestabilan</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Meniru gas mulia</h3>
+      <p>Gas mulia hampir tidak pernah bereaksi karena kulit terluarnya sudah penuh. Atom unsur lain ingin punya susunan elektron yang sama.</p>
+      <div class="gas"><span>He: 2 (duplet)</span><span>Ne: 2, 8 (oktet)</span><span>Ar: 2, 8, 8 (oktet)</span></div>
+      <ul>
+        <li><b>Logam</b> (golongan IA, IIA, IIIA) mudah <b>melepas</b> elektron valensi dan menjadi <b>kation</b> bermuatan positif.</li>
+        <li><b>Nonlogam</b> (golongan VIA, VIIA) mudah <b>menerima</b> elektron dan menjadi <b>anion</b> bermuatan negatif.</li>
+        <li>Atom memilih cara yang butuh elektron paling sedikit.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Coba sendiri: pilih atom</h3>
+      <div class="chips" id="c1"></div>
+      <div class="duo" id="o1"></div>
+      <div class="say" id="t1"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="s2"><div class="wrap">
+  <span class="tag">Materi 2</span>
+  <h2>Menulis struktur Lewis</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Aturan menulis</h3>
+      <ol>
+        <li>Tulis lambang unsur.</li>
+        <li>Cari jumlah elektron valensi dari nomor golongan A.</li>
+        <li>Gambar titik di empat sisi lambang (atas, kanan, bawah, kiri).</li>
+        <li>Isi satu titik per sisi dulu, baru dipasangkan.</li>
+        <li>Untuk ion, beri tanda kurung siku dan tulis muatannya di pojok kanan atas.</li>
+      </ol>
+      <div class="gol" id="gol"></div>
+    </div>
+    <div class="card">
+      <h3>Coba sendiri: lihat struktur Lewis</h3>
+      <div class="chips" id="c2"></div>
+      <div class="duo" id="o2"></div>
+      <div class="say" id="t2"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="s3"><div class="wrap">
+  <span class="tag">Materi 3</span>
+  <h2>Proses pembentukan ikatan ionik</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Contoh: terbentuknya NaCl</h3>
+      <svg class="stage" id="svg" viewBox="0 0 440 220" role="img" aria-label="Animasi perpindahan elektron dari natrium ke klor">
+        <text id="fm" x="220" y="30" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="26" fill="currentColor" style="opacity:0;transition:opacity .8s">NaCl</text>
+        <g class="g" id="na"></g><g class="g" id="cl"></g>
+        <circle id="mv" r="6" cx="0" cy="0" fill="#FFD23F" stroke="#2B1B5A" stroke-width="2.5"></circle>
+      </svg>
+      <div class="ctl">
+        <button class="btn" id="bp">Mundur</button>
+        <div class="dots" id="dots"></div>
+        <button class="btn y" id="bn">Lanjut</button>
+      </div>
+      <div class="say" id="t3"></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:22px">
+        <h3>Ringkasan proses</h3>
+        <ul>
+          <li>Ikatan ionik terjadi antara <b>logam</b> dan <b>nonlogam</b>.</li>
+          <li>Logam melepas elektron menjadi kation, nonlogam menerima elektron menjadi anion.</li>
+          <li>Ion berlawanan muatan saling tarik-menarik. Gaya tarik elektrostatik ini disebut <b>ikatan ionik</b>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Racik senyawa ionik</h3>
+        <div class="row">
+          <select id="sm" aria-label="Pilih logam"></select> <b>+</b> <select id="sx" aria-label="Pilih nonlogam"></select>
+        </div>
+        <div class="formula" id="fo"></div>
+        <div id="bb" style="margin:6px 0"></div>
+        <div class="say" id="tc"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="s4"><div class="wrap">
+  <span class="tag">Latihan</span>
+  <h2>Uji pemahamanmu</h2>
+  <div class="card"><div id="quiz"></div><div class="say" id="sc">Skor: 0 dari 4</div></div>
+</div></section>
+<footer>Kimia kelas 10 · Ikatan kimia · Ikatan ionik</footer>
+
+<script>
+const E={Li:{n:'Litium',sh:[2,1]},Na:{n:'Natrium',sh:[2,8,1]},K:{n:'Kalium',sh:[2,8,8,1]},Mg:{n:'Magnesium',sh:[2,8,2]},Ca:{n:'Kalsium',sh:[2,8,8,2]},Al:{n:'Aluminium',sh:[2,8,3]},O:{n:'Oksigen',sh:[2,6]},S:{n:'Belerang',sh:[2,8,6]},F:{n:'Fluor',sh:[2,7]},Cl:{n:'Klor',sh:[2,8,7]},Ne:{n:'Neon',sh:[2,8],noble:1}};
+const GOL=['','IA','IIA','IIIA','IVA','VA','VIA','VIIA','VIIIA'],GAS={2:'He',10:'Ne',18:'Ar'};
+const col=s=>E[s].noble?'#FFD23F':(E[s].sh.at(-1)<=3?'#FF8FA3':'#5FE0CF');
+const fmt=c=>(Math.abs(c)>1?Math.abs(c):'')+(c>0?'+':'−');
+function info(s){const e=E[s],v=e.sh.at(-1);let ch=0,ion=e.sh.slice();
+ if(!e.noble){if(v<=3){ch=v;ion=e.sh.slice(0,-1)}else{ch=-(8-v);ion[ion.length-1]=8}}
+ return{v,ch,ion,tot:ion.reduce((a,b)=>a+b)}}
+function bohr(cx,cy,sh,o){o=o||{};const b=o.b||22,st=o.st||17,er=o.er||3.5;
+ let s=`<circle cx="${cx}" cy="${cy}" r="${o.nr||14}" fill="${o.c}" stroke="#2B1B5A" stroke-width="2"/><text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka,sans-serif" font-weight="700" font-size="${o.fs||13}" fill="#2B1B5A">${o.sym}</text>`;
+ sh.forEach((n,k)=>{const r=b+st*k;s+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1.5"/>`;
+  for(let i=0;i<n;i++){const a=(k==sh.length-1&&o.gap!=null?o.gap+45*(i+1):360/n*i-90+k*20)*Math.PI/180;
+   s+=`<circle cx="${(cx+r*Math.cos(a)).toFixed(1)}" cy="${(cy+r*Math.sin(a)).toFixed(1)}" r="${er}" fill="#2BB8F0" stroke="#2B1B5A" stroke-width="1"/>`}});
+ return s}
+const badge=(x,y,t)=>`<circle cx="${x}" cy="${y}" r="14" fill="#FFD23F" stroke="#2B1B5A" stroke-width="2.5"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka,sans-serif" font-weight="700" font-size="15" fill="#2B1B5A">${t}</text>`;
+function chips(id,fn,first){const el=document.getElementById(id);el.innerHTML=Object.keys(E).map(s=>`<button class="chip${s==first?' on':''}" data-s="${s}">${s}</button>`).join('');
+ el.onclick=e=>{const s=e.target.dataset.s;if(!s)return;[...el.children].forEach(c=>c.classList.toggle('on',c.dataset.s==s));fn(s)}}
+function why(s){const e=E[s],i=info(s),g=GAS[i.tot];
+ if(e.noble)return `${s} (${e.n}) sudah punya 8 elektron valensi. Atom ini sudah stabil, jadi tidak perlu melepas atau menerima elektron.`;
+ const ion=`${s}<sup>${fmt(i.ch)}</sup>`;
+ return i.ch>0?`${s} (${e.n}) punya ${i.v} elektron valensi. Lebih mudah melepas ${i.v} elektron daripada menerima ${8-i.v}. Jadilah kation ${ion} dengan susunan elektron ${i.ion.join(', ')}, sama seperti ${g}.`
+  :`${s} (${e.n}) punya ${i.v} elektron valensi. Lebih mudah menerima ${8-i.v} elektron daripada melepas ${i.v}. Jadilah anion ${ion} dengan susunan elektron ${i.ion.join(', ')}, sama seperti ${g}.`}
+function r1(s){const i=info(s),b={b:20,st:15,er:3.2,nr:13,sym:s,c:col(s)},arrow=i.ch?'<div class="ar">⇒</div>':'<div class="ar">=</div>';
+ document.getElementById('o1').innerHTML=`<div><svg viewBox="0 0 200 200">${bohr(100,100,E[s].sh,b)}</svg><div class="cap">Atom ${s}</div></div>${arrow}<div><svg viewBox="0 0 200 200">${bohr(100,100,i.ion,b)}${i.ch?badge(172,28,fmt(i.ch)):''}</svg><div class="cap">${i.ch?'Ion '+s+' '+fmt(i.ch):'Tetap stabil'}</div></div>`;
+ document.getElementById('t1').innerHTML=why(s)}
+const ds=[[0,-1],[1,0],[0,1],[-1,0]];
+function lew(s,n,br,ch){const cx=95,cy=65;let d='';
+ for(let i=0;i<n;i++){const k=i%4,sl=i<4?0:1,[dx,dy]=ds[k],x=cx+(dx?dx*34:(sl?6:-6)),y=cy+(dy?dy*32:(sl?6:-6));d+=`<circle cx="${x}" cy="${y}" r="4.5" fill="#FF5D73" stroke="#2B1B5A" stroke-width="1.5"/>`}
+ return `<svg viewBox="0 0 190 130"><text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka,sans-serif" font-weight="700" font-size="38" fill="currentColor">${s}</text>${d}${br?`<path d="M52 18H40V112H52M138 18H150V112H138" fill="none" stroke="currentColor" stroke-width="3"/><text x="170" y="28" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="22" fill="currentColor">${fmt(ch)}</text>`:''}</svg>`}
+function r2(s){const i=info(s),v=i.v;
+ document.getElementById('o2').innerHTML=`<div>${lew(s,v)}<div class="cap">Atom ${s}: ${v} titik</div></div>${i.ch?'<div class="ar">⇒</div>':'<div class="ar">=</div>'}<div>${i.ch?lew(s,i.ch>0?0:8,1,i.ch):lew(s,8)}<div class="cap">${i.ch?'Ion '+s+' '+fmt(i.ch):'Sudah stabil'}</div></div>`;
+ document.getElementById('t2').innerHTML=`${s} ada di golongan ${GOL[v]}, jadi punya ${v} elektron valensi.`+(i.ch>0?` Setelah melepas ${i.ch} elektron, kulit terluar kosong, jadi tidak ada titik di dalam kurung siku.`:i.ch<0?` Setelah menerima ${-i.ch} elektron, titiknya penuh 8 dan ditulis di dalam kurung siku.`:' Atom ini tidak membentuk ion.')}
+document.getElementById('gol').innerHTML=GOL.slice(1).map((g,i)=>`<div><b>${i+1}</b>${g}</div>`).join('');
+const ST=[
+ ['Dua atom netral','Atom Na punya 1 elektron valensi dan atom Cl punya 7. Keduanya belum stabil.',90,350,158],
+ ['Na melepas, Cl menerima','Na memberikan 1 elektron valensinya ke Cl. Kulit terluar Cl sekarang berisi 8 elektron.',90,350,282],
+ ['Terbentuk ion','Na kehilangan 1 elektron sehingga menjadi Na⁺. Cl mendapat 1 elektron sehingga menjadi Cl⁻. Keduanya kini punya susunan seperti gas mulia.',90,350,282],
+ ['Ikatan ionik terbentuk','Ion Na⁺ dan Cl⁻ berlawanan muatan, jadi saling tarik-menarik dengan kuat. Gaya tarik elektrostatik inilah ikatan ionik. Hasilnya senyawa NaCl.',160,280,212]];
+let st=0;const bo={b:28,st:20,er:4,nr:17,fs:15};
+function r3(){const [t,x,na,cl,mv]=ST[st];
+ const ion=st>=2;
+ document.getElementById('na').style.transform=`translateX(${na}px)`;document.getElementById('cl').style.transform=`translateX(${cl}px)`;
+ document.getElementById('na').innerHTML=bohr(0,110,[2,8],{...bo,sym:'Na',c:'#FF8FA3'})+(ion?'':'<circle cx="0" cy="110" r="68" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="5 5"/>')+(ion?badge(0,24,'+'):'')+`<text x="0" y="212" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="16" fill="currentColor">${ion?'Ion Na⁺':'Atom Na'}</text>`;
+ document.getElementById('cl').innerHTML=bohr(0,110,[2,8,7],{...bo,sym:'Cl',c:'#5FE0CF',gap:180})+(ion?badge(0,24,'−'):'')+`<text x="0" y="212" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="16" fill="currentColor">${ion?'Ion Cl⁻':'Atom Cl'}</text>`;
+ document.getElementById('mv').style.transform=`translate(${mv}px,110px)`;
+ document.getElementById('fm').style.opacity=st==3?1:0;
+ document.getElementById('t3').innerHTML=`<b>${t}.</b> ${x}`;
+ document.getElementById('dots').innerHTML=ST.map((_,i)=>`<i class="${i<=st?'on':''}"></i>`).join('');
+ document.getElementById('bp').disabled=st==0;document.getElementById('bn').disabled=st==3}
+document.getElementById('bp').onclick=()=>{st--;r3()};document.getElementById('bn').onclick=()=>{st++;r3()};
+const M=['Li','Na','K','Mg','Ca','Al'],X=['F','Cl','O','S'],XN={F:'fluorida',Cl:'klorida',O:'oksida',S:'sulfida'};
+const sm=document.getElementById('sm'),sx=document.getElementById('sx');
+sm.innerHTML=M.map(s=>`<option value="${s}"${s=='Mg'?' selected':''}>${s} (${E[s].n})</option>`).join('');
+sx.innerHTML=X.map(s=>`<option value="${s}"${s=='Cl'?' selected':''}>${s} (${E[s].n})</option>`).join('');
+const gcd=(a,b)=>b?gcd(b,a%b):a;
+function rc(){const m=sm.value,x=sx.value,a=info(m).ch,b=-info(x).ch,g=gcd(a,b),nm=b/g,nx=a/g,sub=n=>n>1?`<sub>${n}</sub>`:'';
+ document.getElementById('fo').innerHTML=m+sub(nm)+x+sub(nx);
+ document.getElementById('bb').innerHTML=Array(nm).fill(`<span class="bub m">${m}<sup>${fmt(a)}</sup></span>`).join('')+Array(nx).fill(`<span class="bub x">${x}<sup>${fmt(-b)}</sup></span>`).join('');
+ document.getElementById('tc').innerHTML=`<b>${E[m].n} ${XN[x]}.</b> ${m} melepas ${a} elektron, ${x} menerima ${b} elektron. Perbandingan ion ${nm} : ${nx} membuat muatan total nol: ${nm}×(+${a}) + ${nx}×(−${b}) = 0.`}
+sm.onchange=sx.onchange=rc;
+const Q=[
+ ['Atom mana yang cenderung membentuk anion?',['Na','Mg','Cl','Ne'],2,'Cl punya 7 elektron valensi, jadi lebih mudah menerima 1 elektron.'],
+ ['Berapa elektron valensi atom oksigen (O), golongan VIA?',['2','4','6','8'],2,'Golongan VIA berarti 6 elektron valensi.'],
+ ['Mengapa ion Na⁺ stabil?',['Punya 1 elektron valensi','Susunan elektronnya 2, 8 seperti Ne','Punya 11 elektron','Bermuatan positif'],1,'Setelah melepas 1 elektron, Na punya susunan 2, 8 yang sama dengan gas mulia Ne.'],
+ ['Rumus senyawa dari Mg²⁺ dan Cl⁻ adalah...',['MgCl','MgCl₂','Mg₂Cl','Mg₂Cl₂'],1,'1 ion Mg²⁺ (+2) butuh 2 ion Cl⁻ (−1 × 2) agar muatan total nol.']];
+let score=0;
+document.getElementById('quiz').innerHTML=Q.map((q,i)=>`<div class="q" id="q${i}"><p>${i+1}. ${q[0]}</p><div class="opts">${q[1].map((o,j)=>`<button class="btn opt" data-q="${i}" data-o="${j}">${o}</button>`).join('')}</div><div class="fb"></div></div>`).join('');
+document.getElementById('quiz').onclick=e=>{const b=e.target.closest('.opt');if(!b)return;const i=+b.dataset.q,j=+b.dataset.o,box=document.getElementById('q'+i);
+ if(box.dataset.done)return;box.dataset.done=1;const ok=j==Q[i][2];if(ok)score++;
+ box.querySelectorAll('.opt').forEach(x=>{x.disabled=true;x.style.opacity=1;if(+x.dataset.o==Q[i][2])x.classList.add('ok')});if(!ok)b.classList.add('no');
+ box.querySelector('.fb').textContent=(ok?'Benar! ':'Belum tepat. ')+Q[i][3];
+ document.getElementById('sc').textContent=`Skor: ${score} dari 4`+(document.querySelectorAll('[data-done]').length==4?(score==4?'. Sempurna, kamu paham ikatan ionik!':'. Baca lagi materinya lalu coba lagi.'):'')};
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth'}));
+chips('c1',r1,'Na');chips('c2',r2,'Cl');r1('Na');r2('Cl');r3();rc();
+</script>
+</body>
+</html>
